@@ -35,8 +35,8 @@ help() {
 
 # Password generator
 gen_pass() {
-    MATRIX='0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
-    LENGTH=10
+    MATRIX='^$*@#{[]0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
+    LENGTH=16
     while [ ${n:=1} -le $LENGTH ]; do
         PASS="$PASS${MATRIX:$(($RANDOM%${#MATRIX})):1}"
         let n+=1
